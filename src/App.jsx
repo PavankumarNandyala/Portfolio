@@ -6,12 +6,14 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import AskMe from './components/AskMe';
 import Contact from './components/Contact';
+import { wrap } from './ui';
 
 export default function App() {
   return (
-    <>
+    // overflow-x-clip trims the decorative glows at the screen edge without breaking the sticky nav
+    <div className="overflow-x-clip">
       <Nav />
-      <main className="wrap">
+      <main className={wrap}>
         <Hero />
         <Stats />
       </main>
@@ -20,6 +22,6 @@ export default function App() {
       <Skills />
       <AskMe />
       <Contact />
-    </>
+    </div>
   );
 }

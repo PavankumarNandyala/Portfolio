@@ -32,11 +32,13 @@ function CountUp({ to, suffix = '', decimals = 0, duration = 1400 }) {
 
 export default function Stats() {
   return (
-    <div className="stats">
+    <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-3.5 pb-11 pt-2">
       {stats.map((s, i) => (
-        <Reveal key={s.label} className="stat" delay={i * 0.1}>
-          <b><CountUp to={s.to} suffix={s.suffix} decimals={s.decimals} /></b>
-          <span>{s.label}</span>
+        <Reveal key={s.label} delay={i * 0.1} className="rounded-[14px] border border-line bg-surface px-[18px] py-4">
+          <b className="block font-display text-[2rem] font-extrabold leading-[1.1] text-brand">
+            <CountUp to={s.to} suffix={s.suffix} decimals={s.decimals} />
+          </b>
+          <span className="text-[.9rem] text-muted">{s.label}</span>
         </Reveal>
       ))}
     </div>

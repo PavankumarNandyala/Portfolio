@@ -1,4 +1,4 @@
-# Pavankumar Nandyala – Portfolio (React + Vite)
+# Pavankumar Nandyala – Portfolio (React + Vite + Tailwind CSS)
 
 ## Run it
 
@@ -11,24 +11,16 @@ npm run build    # production build in dist/
 ## Structure
 
 ```
+tailwind.config.js     theme colours, fonts, shadows, keyframes/animations
+postcss.config.js      runs Tailwind + Autoprefixer
 src/
+  index.css            Tailwind directives + light/dark colour variables
+  ui.js                shared class strings (wrap, section, heading, pill...)
   data.js              all content (edit here)
   App.jsx              page layout
-  index.css            styles, theme tokens, animations
-  hooks/
-    useInView.js       IntersectionObserver, reveal once
-    useReducedMotion.js
-  components/
-    Nav.jsx            links + light/dark toggle
-    Hero.jsx           intro, photo ring
-    Typewriter.jsx     cycling role text
-    Stats.jsx          count-up numbers
-    Reveal.jsx         fade-up-on-scroll wrapper
-    Experience.jsx     timeline
-    Projects.jsx       project cards
-    Skills.jsx         skill pills
-    AskMe.jsx          Q&A chips
-    Contact.jsx        footer links
+  hooks/               useInView, useReducedMotion
+  components/          Nav, Hero, Typewriter, Stats, Reveal, Experience,
+                       Projects, Skills, AskMe, Contact
 public/profile.jpg     portrait
 ```
 

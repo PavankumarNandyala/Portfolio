@@ -37,7 +37,7 @@ export default function Typewriter({ words, typeMs = 70, deleteMs = 35, holdMs =
   return (
     <>
       <span>{words[index].slice(0, chars)}</span>
-      <span className="cur" aria-hidden="true" />
+      <span aria-hidden="true" className="ml-[3px] inline-block h-[1.1em] w-0.5 animate-blink bg-accent align-[-3px]" />
     </>
   );
 }
